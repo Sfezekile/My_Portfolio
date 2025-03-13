@@ -1,0 +1,200 @@
+/* The  *  selector is used to remove the default margin and padding from all 
+elements. The  box-sizing  property is set to  border-box  to include the 
+padding and border in the element’s total width and height. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* The  body  element is styled with a background color of  #0e0b16  and a font 
+family of  'Poppins' . The  header  element has a background image of  Black and 
+Purple.png  that is centered and covers the entire header. The text color is set 
+to  #fff , and the padding is set to  60px  on the top and bottom and  20px  on 
+the left and right. */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0e0b16;
+    color: #e7dfdd;
+    line-height: 1.6;
+}
+
+header {
+    background: url('Black\ and\ Purple.png') no-repeat center center/cover;
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+header img {
+    height: 150px;
+    border-radius: 50%;
+}
+
+/* The  header h1  element has a font size of  3em  and a bottom margin of 
+0.5em . The  header p  element has a font size of  1.2em  and a bottom 
+margin of  1em .*/
+header h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+} 
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    background-color: #1a132b;
+    padding: 15px;
+}
+
+nav a {
+    color: #e7dfdd;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: #a16fc3;
+    transition: all 0.3s ease;
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.fstyping {
+    width: 100%;
+    max-width: 459px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: #fff;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+@media (max-width: 768px) {
+    .fstyping {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .fstyping {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.fsTextType {
+    position: relative;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.fsTextType.sec-text:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #0e0b16;
+    border-left: 10px solid #fff;
+    animation: animate 4s steps(12) infinite;
+}
+
+@keyframes animate {
+    40%,
+    60% {
+        left: calc(100% + 4px);
+    }
+    100% {
+        left: 0%;
+    }
+}
+
+.project-box img {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+    border-radius: 0.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.music {
+    display: grid;
+    
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.project-card {
+    background-color: #1a132b;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.music-card {
+    background-color: #1a132b;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.music-card img {
+    width: 50%;
+    height: auto;
+    border-radius: 12px;
+    margin-right: 20px;
+    box-shadow: 0 4px 15px 5px rgba(0, 0, 0, 0.8);
+}
+
+.music-card .text {
+    display: flex;
+    flex-direction: column;
+    color: #e7dfdd;
+}
+
+.project-card:hover, .music-card:hover, .music-card img:hover {
+    transform: translateY(-10px);
+    transition: all 0.5s ease;
+    box-shadow: 0 5px 30px 5px rgba(0, 0, 0, 0.8);
+}
+
+a {
+    color: #993a91;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover {
+    color: #a16fc3;
+    transition: all 0.5s ease;
+}
